@@ -25,6 +25,14 @@ Install the required Python packages:
 pip install -r requirements.txt
 ```
 
+Create a [JIRA API token](https://id.atlassian.com/manage-profile/security/api-tokens) and put it, along
+with your email address, in a `.env` file in the `src` directory (or set these environment variables):
+
+```shell
+JIRA_EMAIL = "me@concord.org" 
+JIRA_TOKEN = "..."
+```
+
 ## Scripts included
 
 ### `jira-tasks.py`
