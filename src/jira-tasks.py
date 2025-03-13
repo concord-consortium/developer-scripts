@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Download a simple plain-text list of JIRA issues worked on recently
 
 # Prerequisites:
