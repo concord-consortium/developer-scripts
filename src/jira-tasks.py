@@ -1,13 +1,13 @@
 # Download a simple plain-text list of JIRA issues worked on recently
 
 # Prerequisites:
-#  pip install requests
+#  pip install requests dotenv
+#  Create a .env file or set environment variables for JIRA_EMAIL and JIRA_TOKEN
 
 from collections import defaultdict
 from dotenv import load_dotenv
 import re
 import requests
-import json
 import os
 
 env_path = os.path.join(os.path.dirname(__file__), '.env')
@@ -23,7 +23,6 @@ JIRA_INSTANCE = os.getenv("JIRA_INSTANCE", "https://concord-consortium.atlassian
 JIRA_EMAIL = os.getenv("JIRA_EMAIL", "")  # Your Jira login email
 JIRA_TOKEN = os.getenv("JIRA_TOKEN", "")  # Your Jira API token
 JIRA_FILTER_ID = os.getenv("JIRA_FILTER_ID", "10146")  # Timesheet view filter
-# FILTER_ID = "10179"  # All todos
 
 JIRA_API_URL = f"{JIRA_INSTANCE}/rest/api/3"
 AUTH = (JIRA_EMAIL, JIRA_TOKEN)
